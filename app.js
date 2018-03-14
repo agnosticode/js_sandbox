@@ -1,42 +1,29 @@
+const num1=50;
+const num2=100;
+
 let val;
 
-//Number to String
-val=String(5);
-val=String(4+4);
-//boolean to string
-val=String(true);
-//date to string
-val=String(new Date());
-//array to string
-val=String([1,2,3,4,5]);
+//Simple math with numbers
+val=num1+num2;
+val=num1*num2;
+val=num1-num2;
+val=num1/num2;
+val=num1%num2;//50
+val=num2%num1;//0
 
-//toString Method
-val=(5).toString();
-val=(true).toString();
+//Math Object
+val=Math.PI;
+val=Math.E;
+val=Math.round(6.596);
+val=Math.ceil(2.4);//3
+val=Math.floor(2.4);//2
+val=Math.sqrt(225);//15
+val=Math.abs(-3.65);//3.65
+val=Math.pow(8,2);//64
+val=Math.min(2,33,4,1,55,6,3);//1
+val=Math.max(2,33,4,1,55,6,3);//55
+val=Math.random();//decimal number 0<1
+val=Math.random()*20;//decimal number 0<20
+val=Math.floor(Math.random()*20);//whole number 0<20 
 
-//Strings to number
-val=Number('5');//5 
-//boolean to number
-val=Number(true);//1
-val=Number(false);//0    
-val=Number(null);//0
-val=Number('hello');//NaN-Not a number
-val=Number([1,2,3]);//NaN-Not a Number
-
-val=parseInt('100.23');//100
-val=parseFloat('100.23');//100.23
-
-
-//Output
 console.log(val);
-console.log(typeof val);
-//console.log(val.length);
-console.log(val.toFixed(2));
-
-//Type Coercion
-const val1=String(5);
-const val2=6;
-const sum=val1+val2;//changed val2 into sting then concatinated it
-
-console.log(sum);
-console.log(typeof sum);
