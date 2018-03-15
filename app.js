@@ -1,48 +1,66 @@
-//FUNCTION DECLARATIONS
+//FOR LOOP
 
-function greet(firstName='John', lastName='Doe'){
-    // if(typeof firstName==='undefined'){firstName='John'};//ES5 WAY
-    // if(typeof lastName==='undefined'){lastName='Doe'};//ES5 WAY  
-    //console.log('Hello');
-    return 'Hello '+ firstName +' '+ lastName;
-}
-
-console.log(greet('Steve','Smith')); 
-console.log(greet());
-
-
-//Fuction Expressions
-const square=function(x=3){
-    return x*x;     
-};
-
-// console.log(square(6));
-
-//Immediately invokable function expressions- IIFE's
-(function(){
-    console.log('IIFE RAN....');
-})();
-
-//pass arguments
-(function(name){
-    console.log('Hello '+name);
-})('Satinder');
-
-//PROPERTY METHODS
-const todo={
-    add:function(){
-        console.log('Add todo');
-    },
-    edit:function(id){
-        console.log(`Edit todo ${id}`);
+for(let i=0; i<10; i++){
+    if(i===2){
+        console.log('2 is my favorite number');
+        continue; 
     }
+    if(i===5){
+        console.log('Stop the loop');
+        break;
+    }
+    console.log('Number '+i);
 };
-//call
-todo.add();//Add todo
-todo.edit(56);//Edit todo 56
 
-//add function to object ouside of it
-todo.delete = function(){
-    console.log('Delete todo');
+//While loop-when you dont know how many time to iterate
+let j=0;
+while(j<10){
+    console.log('Number '+ j);
+    j++;
 };
-todo.delete();
+
+//Do while -- always gonna run atleast once
+let k=0;
+do{
+    console.log('Number '+k);
+    k++;
+}
+while(k<5);
+
+//Loop through Arrays
+const cars=['Ford','Chevy','Honda','Toyota'];
+
+// for(let i=0;i<cars.length; i++){
+//     console.log(cars[i]);
+// }
+
+//forEach method to loop through array
+cars.forEach(function(car,index,array){
+    console.log(`${index} ${car}`);
+    console.log(array);
+});
+
+//Map
+const users=[
+    {id:1,name:'John'},
+    {id:2,name:'Sara'},
+    {id:3,name:'Karen'}
+]
+
+const ids=users.map(function(user){
+    return user.id;
+});
+
+console.log(ids);
+
+
+//For in loop
+const person={
+    firstName:'John',
+    lastName:'Doe',
+    age:'23'
+};
+
+for(let x in person){
+    console.log(`${x} : ${person[x]}`)
+}
