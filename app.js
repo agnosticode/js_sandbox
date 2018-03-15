@@ -1,27 +1,82 @@
-let val;
+const id=100;
 
-const today=new Date();
-let birthday=new Date('7-25-1994 21:30:00');//mmddyyyy
-birthday=new Date('July 25 1994');
-birthday=new Date('07/25/1994');//mmddyyyy
+// //Equal to
+// if(id==100){
+//     console.log('Correct');
+// }else{
+//     console.log('Incorrect');
+// };
 
-val=today.getMonth();//2- one less than actual month
-val=today.getDate();//good it is actual 15
-val=today.getDay();//4 means thursday
-val=today.getFullYear();
-val=today.getMinutes();
-val=today.getSeconds();
-val=today.getMilliseconds();
-val=today.getTime();//time stamp
+// //Not equal to
+// if(id != 101){
+//     console.log('Correct');
+// }else{
+//     console.log('Incorrect');
+// };
 
-//Set all this stuff
-birthday.setMonth(2);//march
-birthday.setDate(12);
-birthday.setFullYear(1985);
-birthday.setHours(3);
-birthday.setMinutes(30);
-birthday.setSeconds(16);
+// //Test equal to and type
+// if(id===100){
+//     console.log('Correct');
+// }else{
+//     console.log('Incorrect');
+// };
+
+// if(id !== 100){
+//     console.log('Correct');
+// }else{
+//     console.log('Incorrect');
+// };
 
 
+//Test if undefined
+// if(typeof id !== 'undefined'){
+//     console.log(`The id is ${id}`);
+// }else{
+//     console.log('No ID');
+// }
 
-console.log(birthday);   
+//greater of less than
+// if(id>100){
+//         console.log('Correct');
+// }else{
+//         console.log('Incorrect');
+//     };
+
+
+//If else
+const color='yellow';
+
+// if(color==='red'){
+//     console.log('Color is red');
+// }else if(color==='blue'){
+//     console.log('Color is blue'); 
+// }else{
+//     console.log('Color is not red and blue');
+// };
+
+
+//Logical operators
+const name='Steve';
+const age=20;
+
+//AND &&
+if(age>0 && age<12){
+    console.log(`${name} is a child`);
+}else if (age>=13 && age <=19){
+    console.log(`${name} is a teenager`);
+}else{
+    console.log(`${name} is and adult`);
+};
+
+//OR ||
+if(age<16 || age >65){
+    console.log(`${name} cannot run in race`);
+}else{
+    console.log(`${name} is registered for the race`);
+}
+
+//TERNARY OPERATORS
+console.log(id===100 ? 'Correct' : 'Incorrect');
+
+
+//curly braces in if statements are optional
