@@ -1,66 +1,56 @@
-//FOR LOOP
+//WINDOW METHODS /OBJECTS /POPERTIES
+window.console.log(123);
 
-for(let i=0; i<10; i++){
-    if(i===2){
-        console.log('2 is my favorite number');
-        continue; 
-    }
-    if(i===5){
-        console.log('Stop the loop');
-        break;
-    }
-    console.log('Number '+i);
-};
+//Alert()
+//alert('Hello World');
 
-//While loop-when you dont know how many time to iterate
-let j=0;
-while(j<10){
-    console.log('Number '+ j);
-    j++;
-};
+//Prompt
+//const input=prompt();
 
-//Do while -- always gonna run atleast once
-let k=0;
-do{
-    console.log('Number '+k);
-    k++;
-}
-while(k<5);
-
-//Loop through Arrays
-const cars=['Ford','Chevy','Honda','Toyota'];
-
-// for(let i=0;i<cars.length; i++){
-//     console.log(cars[i]);
+//Confirm
+// if(confirm('Are you sure?')){
+//     console.log('Yes');
+// }else{
+//     console.log('No');
 // }
 
-//forEach method to loop through array
-cars.forEach(function(car,index,array){
-    console.log(`${index} ${car}`);
-    console.log(array);
-});
+let val;
 
-//Map
-const users=[
-    {id:1,name:'John'},
-    {id:2,name:'Sara'},
-    {id:3,name:'Karen'}
-]
+//Outer height and width
+val=window.outerHeight;
+val=window.outerWidth
 
-const ids=users.map(function(user){
-    return user.id;
-});
+//Inner height and width
+val=window.innerHeight;
+val=window.innerWidth
 
-console.log(ids);
+//Scroll
+val=window.scrollY;
+val=window.scrollX;
+
+//Location object
+val=window.location;
+val=window.location.hostname;
+val=window.location.port;
+val=window.location.href;
+val=window.location.search;
+
+//REDIRECT
+//val=window.location.href='http://www.google.com';
+
+//RELOAD
+//val=window.location.reload();
+
+//History Object
+//window.history.go(0);//-1,-2
+val=window.history.length;
+
+//Navigator Object
+val=window.navigator;
+val=window.navigator.appCodeName;//Mozilla
+val=window.navigator.appName;//Netscape
+val=window.navigator.appVersion;//5.0+gibrish
 
 
-//For in loop
-const person={
-    firstName:'John',
-    lastName:'Doe',
-    age:'23'
-};
+console.log(val);
 
-for(let x in person){
-    console.log(`${x} : ${person[x]}`)
-}
